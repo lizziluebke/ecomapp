@@ -1,0 +1,10 @@
+{
+  "resourceName": "productstable",
+  "tableName": "productstable",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

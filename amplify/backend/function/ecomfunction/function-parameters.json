@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "storage": {
+      "productstable": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "auth": {
+      "ecomapp98a37d3b": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

@@ -13,10 +13,15 @@
     },
     "categories": {
       "auth": {
-        "ecomappf9d32e44": {}
+        "ecomappf9d32e44": {},
+        "ecomapp98a37d3b": {},
+        "true": {}
       },
       "function": {
         "ecomappf9d32e44PostConfirmation": {
+          "GROUP": "Admin"
+        },
+        "ecomapp98a37d3bPostConfirmation": {
           "GROUP": "Admin"
         }
       }
