@@ -10,6 +10,16 @@
       "StackName": "amplify-ecomapp-dev-154935",
       "StackId": "arn:aws:cloudformation:us-east-2:085907470738:stack/amplify-ecomapp-dev-154935/e29df9e0-c7fd-11ec-9128-066e1212ce5a",
       "AmplifyAppId": "d1vu5iow0z6em8"
+    },
+    "categories": {
+      "auth": {
+        "ecomappf9d32e44": {}
+      },
+      "function": {
+        "ecomappf9d32e44PostConfirmation": {
+          "GROUP": "Admin"
+        }
+      }
     }
   }
 }
