@@ -12,7 +12,9 @@ import { Auth } from 'aws-amplify'
             return;
         }
 
+        //Nested destructuring of a payload const
         const { idToken: { payload }} = userData; 
+
         const isAuthorized =
             payload['cognito:groups'] &&
             payload['cognito:groups'].includes('Admin');
