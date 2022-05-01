@@ -9,7 +9,9 @@
       "UnauthRoleName": "amplify-ecomapp-dev-154935-unauthRole",
       "StackName": "amplify-ecomapp-dev-154935",
       "StackId": "arn:aws:cloudformation:us-east-2:085907470738:stack/amplify-ecomapp-dev-154935/e29df9e0-c7fd-11ec-9128-066e1212ce5a",
-      "AmplifyAppId": "d1vu5iow0z6em8"
+      "AmplifyAppId": "d1vu5iow0z6em8",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-ecomapp-dev-154935-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-ecomapp-dev-154935-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
@@ -19,10 +21,18 @@
       },
       "function": {
         "ecomappf9d32e44PostConfirmation": {
-          "GROUP": "Admin"
+          "GROUP": "Admin",
+          "deploymentBucketName": "amplify-ecomapp-dev-154935-deployment",
+          "s3Key": "amplify-builds/ecomappf9d32e44PostConfirmation-6c4278574a67792b6153-build.zip"
         },
         "ecomapp98a37d3bPostConfirmation": {
-          "GROUP": "Admin"
+          "GROUP": "Admin",
+          "deploymentBucketName": "amplify-ecomapp-dev-154935-deployment",
+          "s3Key": "amplify-builds/ecomapp98a37d3bPostConfirmation-4f68662b5143705a382f-build.zip"
+        },
+        "ecomfunction": {
+          "deploymentBucketName": "amplify-ecomapp-dev-154935-deployment",
+          "s3Key": "amplify-builds/ecomfunction-39306b596f49496e5a79-build.zip"
         }
       }
     }
