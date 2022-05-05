@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Container from './Container';
+import Container from './container';
 import { API } from 'aws-amplify';
 import { List } from 'antd';
 import checkUser from './checkUser';

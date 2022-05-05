@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Button } from 'react';
 import './App.css';
 
-import { Authenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import { Authenticator } from '@aws-amplify/ui-react';
 
 function Profile() {
   return (
@@ -34,3 +34,4 @@ const containerStyle = {
   margin: '20px auto'
 };
 
+export default Profile; 

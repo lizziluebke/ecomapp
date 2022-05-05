@@ -25,8 +25,8 @@ const Nav = ()=> {
     const loc = useLocation(); 
     console.log(loc); 
     const spitLoc = loc.pathname.split("/"); 
-    console.log(splitLoc); 
-    const key = splitLoc[1] && splitLoc[1].length > 0 ? splitLoc[1] : "home"; 
+    console.log(spitLoc); 
+    const key = spitLoc[1] && spitLoc[1].length > 0 ? spitLoc[1] : "home"; 
     console.log(key); 
     
     const [user, updateUser] = useState({});
