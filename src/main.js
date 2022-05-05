@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Container from './container';
+import { Container } from './container';
 import { API } from 'aws-amplify';
 import { List } from 'antd';
-import checkUser from './checkUser';
+import { checkUser } from './checkUser';
 
-function Main() {
+export const Main = () => {
 
     const [state, setState] = useState({
         products: []
@@ -88,4 +88,3 @@ function Main() {
   )
 }
 
-export default Main;

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Router from './router';
+import { Router } from './router';
 
 import 'antd/dist/antd.css';
 import { Amplify } from 'aws-amplify';
