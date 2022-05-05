@@ -10,11 +10,11 @@ const initialState = {
   , price: ''
 };
 
-function Admin() {
+const Admin = () => {
 
   const [itemInfo, updateItemInfo] = useState(initialState);
 
-  function updateForm(e) {
+  const updateForm = (e) => {
     const formData = {
       ...itemInfo
       , [e.target.name]: e.target.value
@@ -22,10 +22,11 @@ function Admin() {
     updateItemInfo(formData);
   };
 
-  async function addItem() {
+  const addItem = async () => {
     try {
       const data = {
-        body: { ...itemInfo
+        body: { 
+          ...itemInfo
             , price: parseInt(itemInfo.price) 
         }
       }; 
@@ -33,7 +34,7 @@ function Admin() {
       //clear the input form
       updateItemInfo(initialState); 
       await API.post(
-          'ecommapi'
+          'ecomapi'
           , '/products'
           , data
       ); 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
-import { Nav } from './Nav';
-import { Admin } from './Admin';
-import { Main } from './Main';
-import { Profile } from './Profile';
+import { Nav } from './nav';
+import { Admin } from './admin';
+import { Main } from './main';
+import { Profile } from './profile';
 
 export const Router = () => {
   return (
