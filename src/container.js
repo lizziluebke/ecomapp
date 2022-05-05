@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function Container({ children }) {
+export const Container = ({ children }) => {
   return (
     <div style={containerStyle}>
       {children}
     </div>
-  )
+  );
 }
 
 const containerStyle = {
