@@ -1,25 +1,21 @@
 import React from 'react';
-import { HashRouter, Route, Routes} from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
-//import Nav from './nav';
-import Admin from './admin';
-import Main from './main';
-import Profile from './profile';
+import { Nav } from './Nav';
+import { Admin } from './Admin';
+import { Main } from './Main';
+import { Profile } from './Profile';
 
-function Router() {
-  
+export const Router = () => {
   return (
     <HashRouter>
-      <Routes>
-      <Route>
+      <Nav  />
+      <Switch>
         <Route exact path='/' component={Main} />
         <Route path='/admin' component={Admin} />
         <Route path='/profile' component={Profile} />
         <Route component={Main} />
-      </Route>
-      </Routes>
+      </Switch>
     </HashRouter>
   );
 };
-
-export default Router; 
