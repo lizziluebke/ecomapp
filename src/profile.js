@@ -3,28 +3,28 @@ import './App.css';
 
 import { Authenticator } from '@aws-amplify/ui-react';
 
-function Profile() {
+export const Profile = () => {
   return (
     <div style={containerStyle}>
         <Authenticator>
-        {({ signOut, user }) => (
-        <main>
-            <h1>
-                Hello {user.username}
-            </h1>
-            {console.log(user)}
-            <h2> 
-                Email: {user.attributes.email}
-            </h2>
+            {({ signOut, user }) => (
+                <main>
+                    <h1>
+                        Hello {user.username}
+                    </h1>
+                    {console.log(user)}
+                    <h2> 
+                        Email: {user.attributes.email}
+                    </h2>
 
-            <Button 
-                onClick={signOut}
-            > 
-                Sign out
-            </Button>
-        </main>
-      )}
-    </Authenticator>
+                    <Button 
+                        onClick={signOut}
+                    > 
+                        Sign out
+                    </Button>
+                </main>
+          )}
+      </Authenticator>
     </div>
   );
 };
@@ -34,4 +34,3 @@ const containerStyle = {
   margin: '20px auto'
 };
 
-export default Profile; 
