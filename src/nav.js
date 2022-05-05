@@ -1,8 +1,7 @@
 import React, { 
     useState
     , useEffect 
-    }
-from 'react';
+    } from 'react';
 
 import { 
     Link
@@ -17,11 +16,13 @@ import {
 } from '@ant-design/icons';
 
 import { Hub } from 'aws-amplify';
-import checkUser from './checkUser';
+import { checkUser } from './checkUser';
 
 
-const Nav = ()=> {
+export const Nav = ({ current }) => {
 
+    const [user, updateUser] = useState({});
+    
     const loc = useLocation(); 
     console.log(loc); 
     const spitLoc = loc.pathname.split("/"); 
@@ -29,24 +30,23 @@ const Nav = ()=> {
     const key = spitLoc[1] && spitLoc[1].length > 0 ? spitLoc[1] : "home"; 
     console.log(key); 
     
-    const [user, updateUser] = useState({});
 
     useEffect(
         () => {
-        checkUser(updateUser);
-        Hub.listen(
+          checkUser(updateUser);
+          Hub.listen(
             'auth'
             , (data) => {
 
-            // another example of nested destructuring
+                // another example of nested destructuring
                 const { payload: { event } } = data;
                 console.log('event: ', event);
 
                  if (event === 'signIn' || event === 'signOut') {
                      checkUser(updateUser);
                  }
-            }
-        );
+            } 
+            );
     }
         , []
 );
@@ -54,7 +54,7 @@ const Nav = ()=> {
   return (
     <div>
       <Menu 
-          selectedKeys={[key]} 
+          selectedKeys={[current]} 
           mode="horizontal"
       >
         <Menu.Item 
@@ -68,10 +68,10 @@ const Nav = ()=> {
           </Link>
         </Menu.Item>
         <Menu.Item 
-                key='profile'
+            key='profile'
         >
         <Link 
-                to='/profile'
+            to='/profile'
         >
             <UserOutlined />
                 Profile
@@ -94,6 +94,5 @@ const Nav = ()=> {
       </Menu>
     </div>
   )
-}
+};
 
-export default Nav;
