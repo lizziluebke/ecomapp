@@ -1,10 +1,9 @@
-import { Auth } from 'aws-amplify'
+import { Auth } from 'aws-amplify';
 
-    async function checkUser(updateUser) {
+export const checkUser = async (updateUser) => {
         const userData = await Auth
             .currentSession()
-            .catch(err => console.log('error: ', err)
-    );
+            .catch(err => console.log('error: ', err));
 
         if (!userData) {
             console.log('userData: ', userData);
@@ -22,7 +21,6 @@ import { Auth } from 'aws-amplify'
         updateUser({
             username: payload['cognito:username']
             , isAuthorized
-    });
+        });
 };
 
-export default checkUser;
