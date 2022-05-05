@@ -19,18 +19,17 @@ import { Hub } from 'aws-amplify';
 import { checkUser } from './checkUser';
 
 
-export const Nav = ({ current }) => {
+export const Nav = () => {
 
-    const [user, updateUser] = useState({});
     
     const loc = useLocation(); 
     console.log(loc); 
-    const spitLoc = loc.pathname.split("/"); 
-    console.log(spitLoc); 
-    const key = spitLoc[1] && spitLoc[1].length > 0 ? spitLoc[1] : "home"; 
+    const splitLoc = loc.pathname.split("/"); 
+    console.log(splitLoc); 
+    const key = splitLoc[1] && splitLoc[1].length > 0 ? splitLoc[1] : "home"; 
     console.log(key); 
     
-
+    const [user, updateUser] = useState({});
     useEffect(
         () => {
           checkUser(updateUser);
@@ -54,7 +53,7 @@ export const Nav = ({ current }) => {
   return (
     <div>
       <Menu 
-          selectedKeys={[current]} 
+          selectedKeys={[key]} 
           mode="horizontal"
       >
         <Menu.Item 
