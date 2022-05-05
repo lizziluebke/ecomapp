@@ -11,9 +11,9 @@ export const Router = () => {
     <HashRouter>
       <Nav  />
       <Routes>
-        <Route exact path='/' component={Main} />
-        <Route path='/admin' component={Admin} />
-        <Route path='/profile' component={Profile} />
+        <Route exact path='/' element={<Main/>} />
+        <Route path='/admin' element={<Admin/>} />
+        <Route path='/profile' element={<Profile/>} />
         <Route component={Main} />
       </Routes>
     </HashRouter>
